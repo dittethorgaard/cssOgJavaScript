@@ -17,9 +17,12 @@
 /* Define variables in the :root */
  :root {
    --contrast: rgb(5, 17, 5);
-   --backgr: #f1e695;
+   --backgr: rgb(241, 230, 147);
    --bgA: rgb(239, 120, 211);
    --bgB: rgb(143, 225, 142); 
+   --bgC: rgb(131, 191, 251);
+   --bgD: rgb(252, 252, 165);
+   --bgE: rgb(255, 208, 119);
 
    /* OPGAVE 1: definer en palette med mindst 5 egentlige farver plus kontrasterne sort og hvid */
  }
@@ -34,7 +37,7 @@
 /* responsive billeder */
 .resp {
   width: 100%;
-  height: autox;
+  height: auto;
 }
 
 header,
@@ -44,6 +47,12 @@ footer {
 }
 
 /* OPGAVE 3: Store skærme: Skjul .smaller og .burger med CSS */
+.smaller {
+  visibility: hidden;
+}
+.burger {
+  visibility: hidden;
+}
 
 /* OPGAVE 4: Flexbox
 
@@ -55,6 +64,19 @@ d) Brug justify-content til at fordele dine kolonner. Prøv alle muligheder.
 Se: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content
 
 */
+.menu {
+  padding: 32px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  padding: 32px;
+}
+
 
 /* OPGAVE 5: Responsivt design
 
@@ -79,6 +101,13 @@ Herunder ser du de responsive regler, der skal redigeres.
   body {
     /* brug dine variabler her! */
     background-color: var(--bgB); 
+  }
+  .burger {
+    visibility: visible;
+  }
+  
+  .row {
+    display: block;
   }
 }
 

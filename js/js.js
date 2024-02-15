@@ -4,6 +4,28 @@
  **/
 console.log('Der er kontakt til js/js.js')
 
+/** variabler */
+let a = "Julemand" // streng
+let b = 23 // tal
+let c = false
+let julemandenFindes = true // booleans
+
+const and = "Pekingand"
+
+console.log ( b * b )
+console.log ( "Findes julemanden virkelig? " + julemandenFindes )
+
+/** kontrolstrukturer */
+if ( julemandenFindes === false ) {
+    console.log (" Ja. ")
+} else {
+    console.log (" Nej. ")
+}
+
+/**InnerHTML */
+document.getElementById ("titel").innerHTML = "Mojn Do!"
+
+
 /**
  * JavaScript Introduktion
  */
@@ -13,7 +35,7 @@ console.log('Der er kontakt til js/js.js')
 
 /** Øvelse: Toggle Class 
  * 
- * Lav en knap, der viser eller skuler en menu
+ * Lav en knap, der viser eller skjuler en menu
  * 
 */
 /*
@@ -27,3 +49,7 @@ function viseSkjule() {
     // flere toggles mv. kan tilføjes her
  }
  */
+function viseSkjule(){
+    alert ("tak for i dag!")
+    document.getElementById ("titel").innerHTML = "Special for you my friend!"
+}
