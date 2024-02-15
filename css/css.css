@@ -1,0 +1,109 @@
+/**
+ * fil: css/css.css
+ * formål: opgaver i responsivt design med flexbox og @media-regler.
+ **/
+
+ /* fjern indbygget whitespace i vinduet */ 
+ * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Define variables in the :root */
+ :root {
+   --contrast: rgb(5, 17, 5);
+   --backgr: #f1e695;
+   --bgA: rgb(239, 120, 211);
+   --bgB: rgb(143, 225, 142); 
+
+   /* OPGAVE 1: definer en palette med mindst 5 egentlige farver plus kontrasterne sort og hvid */
+ }
+
+/* Logo: vælg selv størrelsen */
+#logo {
+  width: 250px;
+  height: auto;
+  /* OPGAVE 2: Hvis billedet skal have denne størrelse, hvorfor så ikke skalere billedet i Photoshop? */ 
+}
+
+/* responsive billeder */
+.resp {
+  width: 100%;
+  height: autox;
+}
+
+header,
+footer {
+  background-color: var(--contrast);
+  color: var(--backgr)
+}
+
+/* OPGAVE 3: Store skærme: Skjul .smaller og .burger med CSS */
+
+/* OPGAVE 4: Flexbox
+
+a) Sæt .row til flex.
+b) Tilpas kolonnebredden til ca. 33% (hvis der er tre kolonner, eksperimenter gerne med flere!)
+c) Hvad er padding? Og hvad sker der hvis du sætter padding til fx 32px?
+d) Brug justify-content til at fordele dine kolonner. Prøv alle muligheder.
+
+Se: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content
+
+*/
+
+/* OPGAVE 5: Responsivt design
+
+0) Prøv at bruge de responsive regler sådan, at baggrundsfarven i body-elementet ændres på de viste skærmstørrelser.
+00) Afprøv dette i browserens inspect tool og med flere opløsninger.
+000) Når dette virker der du klar til:
+
+Joe har overvejet nogen ting mht. responsivt design. Her er hans krav til produktionen:
+
+a) På små skærme skal .row ikke display:flex - sæt den til display:block i stedet for.
+b) På små skærme skal skrifttypen være lettere at læse: gør den større på små skærme. 
+c) På små skærme skal selv store tommelfingre kunne bruges til navigation. Gør knapper og links store!
+d) På store skærme skal skrifttypen være lidt mindre; men stadig læselig. 
+e) På store skærme må menuen gerne stå vandret.
+f) På små skærme skal menuen være lodret.
+
+Herunder ser du de responsive regler, der skal redigeres. 
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    /* brug dine variabler her! */
+    background-color: var(--bgB); 
+  }
+}
+
+/* ... fortsæt selv med breakpoints ... */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* Opgave 6: Vis og skjul relevante menuer 
+
+På små skærme vil vi gerne:
+
+a) se .burger
+b) skjule .big
+c) .smaller forbliver skjult ind til man klikker på burgeren.
+
+Vi vil lave det sådan, at menuen bliver synlig med et klik.
+Et klik er en "event", der kan bruges af JavaScript.
+*/
